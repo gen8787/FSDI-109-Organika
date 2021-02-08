@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './footer.css';
 
 class Footer extends Component {
-    state = {  }
-    render() { 
+    state = {}
+    render() {
         return (
             <div className="footer-text">
-                <hr/>
-                <center>this is my footer</center>
+                <hr />
+                <p>this is my footer</p>
             </div>
         );
     }

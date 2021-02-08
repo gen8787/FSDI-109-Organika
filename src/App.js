@@ -3,23 +3,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
 import Navbar from './components/navbar/navbar';
+import Catalog from './components/catalog';
+import Todo from './components/todo';
 import Footer from './components/footer/footer';
-import Product from './components/product/index';
 
 function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
 
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
+      <Catalog></Catalog>
+      <hr />
 
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-
-      <Product></Product>
+      <Todo></Todo>
 
       <Footer></Footer>
     </div>
