@@ -1,15 +1,25 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Product from './components/product/index';
 
 function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
 
-      <h1>Welcome.</h1>
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+
+      <Product></Product>
 
       <Footer></Footer>
     </div>

@@ -5,7 +5,7 @@ class Navbar extends Component {
   state = {};
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-5">
         <a className="navbar-brand" href="/#">
           Navbar
         </a>
