@@ -4,16 +4,16 @@ import "./product.css"
 
 class Product extends Component {
     state = {
-        min: 1,
-        price: this.props.price,
-        total: this.props.price
+        min: this.props.data.minimum || 1,
+        price: this.props.data.price,
+        total: this.props.data.price
     }
 
     render() {
         return (
             <div className="product shadow-sm">
-                <img src="https://picsum.photos/230/200" alt="prooduct"></img>
-                <p>Product Description Here</p>
+                <img src={"/img/products/" + this.props.data.image} alt="prooduct"></img>
+                <p>{this.props.data.title}</p>
                 <h6>Price: ${this.state.price.toFixed(2)}</h6>
                 <h6>Total: ${this.state.total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h6>
 

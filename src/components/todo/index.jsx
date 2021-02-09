@@ -11,25 +11,28 @@ class Todo extends Component {
         return (
             <>
 
-                <h1 className="display-4 mb-3">Todo</h1>
+                <h1 className="display-4 mb-3">Grocery List</h1>
 
                 <div>
-                    <input value={this.state.todoText} onChange={this.handleTextChange} type="text" />
-                    <button onClick={this.handleButtonClick} className="btn btn-info">Add Todo</button>
+                    <input value={this.state.todoText} placeholder="enter text here" onChange={this.handleTextChange} type="text" />
+                    <button type="submit" onClick={this.handleButtonClick} className="btn btn-info ml-3">Add Item</button>
                 </div>
 
-                <ul>
-                    {this.state.allTodos.map((todo, i) =>
-                        <li key={i}>{todo} - <button onClick={() => this.handleDeleteTodo(i)} className="btn btn-small btn-danger">Delete</button></li>
-                    )}
-                </ul>
+                <div className="list mt-3">
+                    <ul>
+                        {this.state.allTodos.map((todo, i) =>
+                            <li key={i}>{todo} - <button onClick={() => this.handleDeleteTodo(i)} className="btn btn-sm btn-danger">Delete</button></li>
+                        )}
+                    </ul>
+                </div>
+
 
             </>
         );
     }
 
     // H A N D L E R S
-    handleTextChange = (e) => {
+    handleTextChange = e => {
         this.setState({ todoText: e.target.value });
     };
 
@@ -40,7 +43,7 @@ class Todo extends Component {
         this.setState({ allTodos: todos, todoText: "" });
     };
 
-    handleDeleteTodo = (i) => {
+    handleDeleteTodo = i => {
         const [...curTodos] = this.state.allTodos;
         curTodos.splice(i, 1);
 

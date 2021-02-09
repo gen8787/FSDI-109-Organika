@@ -3,11 +3,12 @@ import React, { Component } from "react"; // imrc
 // cc
 class Navbar extends Component {
   state = {};
+
   render() {
     return (
-      <nav className="navbar sticky-top navbar-expand-sm navbar-dark bg-dark mb-3">
+      <nav className="navbar sticky-top navbar-expand-sm navbar-dark bg-dark mb-3" style={{ backgroundColor: "rgb(22 94 106)" }}>
         <a className="navbar-brand" href="/#">
-          Navbar
+          Organika
         </a>
         <button
           className="navbar-toggler"
