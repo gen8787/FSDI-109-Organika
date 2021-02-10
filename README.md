@@ -1,4 +1,4 @@
-# FSDI 108 - Introductory React
+# FSDI 109: Intermediate React
 
 ### Organika Store
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react"; // imrc
+import { Link } from "react-router-dom";
 
 // cc
 class Navbar extends Component {
@@ -7,10 +8,10 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="navbar sticky-top navbar-expand-sm navbar-dark bg-dark mb-3" style={{ backgroundColor: "rgb(22 94 106)" }}>
-        <a className="navbar-brand" href="/#">
+        <Link className="navbar-brand" to="/">
           <img src="/oka.png" width="30" height="30" className=" mr-1 d-inline-block align-top" alt=""></img>
             Organika
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,18 +25,21 @@ class Navbar extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link active" href="/#">
+            <Link className="nav-item nav-link active" to="/">
               Home <span className="sr-only">(current)</span>
-            </a>
-            <a className="nav-item nav-link" href="/#">
+            </Link>
+            <Link className="nav-item nav-link" to="/store">
               Store
-            </a>
-            <a className="nav-item nav-link" href="/#">
-              Weekly Deals
-            </a>
-            <a className="nav-item nav-link" href="/#">
+            </Link>
+            <Link className="nav-item nav-link" to="/list">
+              Grocery List
+            </Link>
+            <Link className="nav-item nav-link" to="/">
               Cart
-            </a>
+            </Link>
+            <Link className="nav-item nav-link" to="/about">
+              About Us
+            </Link>
           </div>
         </div>
       </nav>

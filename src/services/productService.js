@@ -6,7 +6,6 @@ class ProductService {
     // End of Class
 }
 
-
 // mock data
 var data = [
     {
@@ -83,6 +82,5 @@ var data = [
         category: "Beverages",
     },
 ];
-
 
 export default ProductService;

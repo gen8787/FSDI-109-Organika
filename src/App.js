@@ -1,24 +1,34 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';  // Bootstrap
+import 'font-awesome/css/font-awesome.min.css';  // Font Awesome
+import { BrowserRouter, Route, Switch } from 'react-router-dom'; // Router
 
+// Component Imports
 import Navbar from './components/navbar/navbar';
 import Catalog from './components/catalog';
 import Todo from './components/todo';
 import Footer from './components/footer/footer';
+import LandingPage from './components/landingPage';
+import About from './components/about';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar></Navbar>
 
-      <Catalog></Catalog>
-      <hr />
+        <div className="container-fluid">
+          <Switch>
+            <Route path="/" exact component={LandingPage}></Route>
+            <Route path="/store" component={Catalog}></Route>
+            <Route path="/list" component={Todo}></Route>
+            <Route path="/about" component={About}></Route>
+          </Switch>
+        </div>
 
-      <Todo></Todo>
-
-      <Footer></Footer>
-    </div>
+        <Footer></Footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
