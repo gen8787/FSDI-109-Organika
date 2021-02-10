@@ -8,7 +8,8 @@ class Navbar extends Component {
     return (
       <nav className="navbar sticky-top navbar-expand-sm navbar-dark bg-dark mb-3" style={{ backgroundColor: "rgb(22 94 106)" }}>
         <a className="navbar-brand" href="/#">
-          Organika
+          <img src="/oka.png" width="30" height="30" className=" mr-1 d-inline-block align-top" alt=""></img>
+            Organika
         </a>
         <button
           className="navbar-toggler"
@@ -27,13 +28,13 @@ class Navbar extends Component {
               Home <span className="sr-only">(current)</span>
             </a>
             <a className="nav-item nav-link" href="/#">
-              Features
+              Store
             </a>
             <a className="nav-item nav-link" href="/#">
-              Pricing
+              Weekly Deals
             </a>
-            <a className="nav-item nav-link disabled" href="/#">
-              Disabled
+            <a className="nav-item nav-link" href="/#">
+              Cart
             </a>
           </div>
         </div>

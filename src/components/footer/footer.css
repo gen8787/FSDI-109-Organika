@@ -1,8 +1,7 @@
 .footer-text {
-    color: red;
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    text-decoration: underline;
-    height: 200px;
+    font-size: 24px;
+    height: 215px;
     background-color: #353A3F;
 }

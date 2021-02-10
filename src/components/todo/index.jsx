@@ -15,13 +15,13 @@ class Todo extends Component {
 
                 <div>
                     <input value={this.state.todoText} placeholder="enter text here" onChange={this.handleTextChange} type="text" />
-                    <button type="submit" onClick={this.handleButtonClick} className="btn btn-info ml-3">Add Item</button>
+                    <button type="submit" onClick={this.handleButtonClick} className="btn btn-success ml-3">Add Item</button>
                 </div>
 
                 <div className="list mt-3">
                     <ul>
                         {this.state.allTodos.map((todo, i) =>
-                            <li key={i}>{todo} - <button onClick={() => this.handleDeleteTodo(i)} className="btn btn-sm btn-danger">Delete</button></li>
+                            <li className="mb-3" key={i}>{todo} - <button onClick={() => this.handleDeleteTodo(i)} className="btn btn-sm btn-danger">Delete</button></li>
                         )}
                     </ul>
                 </div>

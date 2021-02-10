@@ -13,7 +13,7 @@ class Product extends Component {
         return (
             <div className="product shadow-sm">
                 <img src={"/img/products/" + this.props.data.image} alt="prooduct"></img>
-                <p>{this.props.data.title}</p>
+                <p className="">{this.props.data.title}</p>
                 <h6>Price: ${this.state.price.toFixed(2)}</h6>
                 <h6>Total: ${this.state.total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h6>
 
