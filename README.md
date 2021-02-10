@@ -16,7 +16,7 @@
 - [x] Show the list of items on the catalog
 - [x] Allow the user to pick the number of items to be added
 - [x] Todo component working (adding new todos and removing todos with a click of a button/double click/icon)
-- [] Filter by category (opotional)
+- [ ] Filter by category (opotional)
 
 Note:
 
