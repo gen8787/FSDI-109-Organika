@@ -4,10 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// redux imports
+import { createStore } from 'redux';
+import cartCounterReducer from './store/reducers/cartCounter';
+import { Provider } from 'react-redux';
+
+
+// added for redux
+const store = createStore(
+  cartCounterReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+
+// changed for redux
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

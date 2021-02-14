@@ -6,16 +6,27 @@ import './catalog.css';
 class Catalog extends Component {
     state = {
         allProducts: [],
-        categories: []
+        categories: [],
+        selectedCat: ""
     }
 
 
     render() {
+
+        var prodsToDisplay = this.state.allProducts;
+
+        if (this.state.selectedCat !== "") {
+            prodsToDisplay = prodsToDisplay.filter(prod => prod.category === this.state.selectedCat);
+        }
+
         return (
             <React.Fragment>
 
                 <div className="categories">
                     <h1 className="display-5 my-3">Product Categories</h1>
+
+                    <button onClick={() => this.handleCategoryClick("")} className="btn btn-sm btn-info mr-3">All Products</button>
+
                     {this.state.categories.map((cat, i) => (
                         <button onClick={() => this.handleCategoryClick(cat)} key={i} className="btn btn-sm btn-info mr-3">{cat}</button>
                     ))}
@@ -25,7 +36,7 @@ class Catalog extends Component {
                 <h1 className="display-4 my-3">All Products</h1>
 
                 <div className="products">
-                    {this.state.allProducts.map((prod) => (
+                    {prodsToDisplay.map((prod) => (
                         <Product key={prod.id} data={prod}></Product>
                     ))}
                 </div>
@@ -51,8 +62,10 @@ class Catalog extends Component {
         this.setState({ allProducts: data, categories: cats });
     }
 
+
+    // H A N D L E R S
     handleCategoryClick = (cat) => {
-        console.log(cat)
+        this.setState({ selectedCat: cat });
     }
 
 

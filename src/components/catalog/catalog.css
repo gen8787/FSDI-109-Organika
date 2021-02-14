@@ -2,3 +2,9 @@
     width: 160px;
     height: 60px;
 }
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}

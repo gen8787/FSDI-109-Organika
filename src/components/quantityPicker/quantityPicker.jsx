@@ -18,9 +18,6 @@ class QuantityPicker extends Component { // cc
 
                 <button onClick={this.increase} className="btn btn-small btn-success">+</button>
 
-                <br />
-                <button onClick={this.increase} className="btn btn-small btn-primary mt-2 w-75">Add to Cart</button>
-
             </div>
         );
     }
@@ -41,6 +38,7 @@ class QuantityPicker extends Component { // cc
 
         this.props.onValueChange(qty);
     };
+
 }
 
 export default QuantityPicker;
