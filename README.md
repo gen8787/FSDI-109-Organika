@@ -2,6 +2,8 @@
 
 ### Organika Store
 
+### [Project Link (does not open in new tab)](https://organika-store.netlify.app)
+
 #### Deliver an online store created as a React project with the following:
 
 - [x] The items need to be stored into a separated reducer to handle the Cart slice.
