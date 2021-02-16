@@ -56,8 +56,8 @@ class Navbar extends Component {
           </ul>
 
           <span className="">
-            <Link className="nav-item nav-link" to="/about">
-              <i style={{ fontSize: "20px" }} className="fa fa-cart-plus mr-1"> </i>
+            <Link className="nav-item nav-link" to="/cart">
+              <i style={{ fontSize: "20px" }} className="fa fa-shopping-cart mr-1"> </i>
               <span>{this.props.cartCount}</span>
             </Link>
           </span>
@@ -72,7 +72,7 @@ class Navbar extends Component {
 
 const mapStateToProps = state => {
   return {
-    cartCount: state
+    cartCount: state.cart.length
   };
 };
 

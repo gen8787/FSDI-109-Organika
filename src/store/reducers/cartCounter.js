@@ -11,5 +11,3 @@ const cartCounterReducer = (state = 0, action) => {
 };
 
 export default cartCounterReducer;
-
-// import '' from '';

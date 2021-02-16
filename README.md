@@ -4,22 +4,14 @@
 
 #### Deliver an online store created as a React project with the following:
 
-##### Elements:
+- [x] The items need to be stored into a separated reducer to handle the Cart slice.
+- [x] The user can add items to the cart (and that will be saved into redux store),
+- [x] The user is presented with the number of unique products in the NavBar
+- [x] When click on the NavBar Cart menu items, it is presented with the Cart page.
+- [x] The Cart page shows the products added to the cart and the Total to pay.
 
-- [x] A reusable component that allows the user to pick the number of products to add to the cart
-- [x] A reusable component that displays the information about the items
-- [x] A service that retrieves the list of items (from memory for now)
-- [x] Navigation and footer on separated components
+- [x] The user can see the list of items on the cart by visiting cart page.
 
-##### Functionality:
-
-- [x] Show the list of items on the catalog
-- [x] Allow the user to pick the number of items to be added
-- [x] Todo component working (adding new todos and removing todos with a click of a button/double click/icon)
-- [ ] Filter by category (opotional)
-
-Note:
-
-- [x] Please make sure to deliver a good looking/presentable project.
+- [ ] (inwork) The user can remove products from the cart by pressing a button.
 
 ![](/img/app.png)

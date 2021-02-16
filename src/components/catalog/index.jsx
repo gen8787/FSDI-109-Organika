@@ -22,15 +22,15 @@ class Catalog extends Component {
         return (
             <React.Fragment>
 
-                <div className="categories">
-                    <h1 className="display-5 my-3">Product Categories</h1>
+                <div className="categories mb-4">
+                    <h1 className="display-5 mt-3 mb-4">Product Categories</h1>
 
                     <button onClick={() => this.handleCategoryClick("")} className="btn btn-sm btn-info mr-3">All Products</button>
 
                     {this.state.categories.map((cat, i) => (
                         <button onClick={() => this.handleCategoryClick(cat)} key={i} className="btn btn-sm btn-info mr-3">{cat}</button>
                     ))}
-                    <hr />
+                    <hr className="mt-4" />
                 </div>
 
                 <h1 className="display-4 my-3">All Products</h1>

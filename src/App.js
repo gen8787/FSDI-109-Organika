@@ -10,6 +10,7 @@ import Todo from './components/todo';
 import Footer from './components/footer/footer';
 import LandingPage from './components/landingPage';
 import About from './components/about';
+import Cart from './components/cart';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/store" component={Catalog}></Route>
             <Route path="/list" component={Todo}></Route>
             <Route path="/about" component={About}></Route>
+            <Route path="/cart" component={Cart}></Route>
           </Switch>
         </div>
 

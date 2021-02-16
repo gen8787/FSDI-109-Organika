@@ -6,13 +6,13 @@ import reportWebVitals from './reportWebVitals';
 
 // redux imports
 import { createStore } from 'redux';
-import cartCounterReducer from './store/reducers/cartCounter';
 import { Provider } from 'react-redux';
+import rootReducer from './store/reducers/root';
 
 
 // added for redux
 const store = createStore(
-  cartCounterReducer,
+  rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

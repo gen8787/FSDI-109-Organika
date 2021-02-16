@@ -1,0 +1,28 @@
+.cart-item{
+    display: inline-flex;
+    align-items: center;
+    background-color: #87af523d;
+    border: 3px solid #60883B;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 75%;
+    height: 80px;
+}
+
+.cart-item img {
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.cart-item p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.cart-total {
+    text-align: right;
+    margin-right: 150px;
+}
