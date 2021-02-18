@@ -1,19 +1,30 @@
 # FSDI 109: Intermediate React
 
-### Organika Store
+## Organika Store
 
 ### [Project Link (does not open in new tab)](https://organika-store.netlify.app)
 
-#### Deliver an online store created as a React project with the following:
+### Please deliver a react project for an online store with the following functionality:
 
-- [x] The items need to be stored into a separated reducer to handle the Cart slice.
+#### Store functionality:
+
+- [x] Display the catalog to the user on /catalog page
+- [x] Retrieve the catalog of products from a server (http://fsdi.azurewebsites.net/api/products (Links to an external site.))
 - [x] The user can add items to the cart (and that will be saved into redux store),
+- [x] The items need to be stored into a separated reducer to handle the Cart slice.
 - [x] The user is presented with the number of unique products in the NavBar
 - [x] When click on the NavBar Cart menu items, it is presented with the Cart page.
 - [x] The Cart page shows the products added to the cart and the Total to pay.
+- [ ] Use a ProductInCart component to display the information of the product(s) added to the cart.
+- [x] The user can remove products from the cart (and they should be removed from the state)
 
-- [x] The user can see the list of items on the cart by visiting cart page.
+#### Todo list functionality.
 
-- [ ] (inwork) The user can remove products from the cart by pressing a button.
+- [x] Have a working TODO app in /todo page that allows the user to register todos.
+- [x] Use Redux State to store the list of TODOS
+- [x] Display the list of TODOS (reading them from the state)
+- [x] Allow the user to remove TODOs
+
+#### Remember to work on the overall presentation of the project, it should look ready to deploy.
 
 ![](/img/app.png)

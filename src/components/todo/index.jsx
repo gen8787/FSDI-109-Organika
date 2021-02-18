@@ -15,8 +15,8 @@ class Todo extends Component {
                 <h1 className="display-4 mb-3">Grocery List</h1>
 
                 <div>
-                    <input value={this.state.todoText} placeholder="enter text here" onChange={this.handleTextChange} type="text" />
-                    <button type="submit" onClick={() => this.props.addTodo(this.state.todoText)} className="btn btn-success ml-3">Add Item</button>
+                    <input ref={(input) => { this.nameInput = input; }} value={this.state.todoText} placeholder="enter text here" onChange={this.handleTextChange} type="text" />
+                    <button type="submit" onClick={() => this.submitHandler()} className="btn btn-success ml-3">Add Item</button>
                 </div>
 
                 <div className="list mt-3">
@@ -31,10 +31,24 @@ class Todo extends Component {
         );
     }
 
+
+    // O N   M O U N T
+    componentDidMount() {
+        this.nameInput.focus();
+    };
+
+
     // H A N D L E R S
     handleTextChange = e => {
         this.setState({ todoText: e.target.value });
     };
+
+    submitHandler = () => {
+        this.props.addTodo(this.state.todoText);
+        this.setState({ todoText: "" });
+        this.nameInput.focus();
+
+    }
 
     // E N D   O F   C L A S S
 }
