@@ -1,6 +1,13 @@
+// import axios from "axios";
+
 class ProductService {
-    getProducts() {
+    async getProducts() {
         return data;
+
+        // seed data: https://pastebin.com/ypE4mF1v
+        // const res = await axios.get("http://fsdi.azurewebsites.net/api/products");
+        // console.log("axios GET complete!");
+        // return res.data;
     }
 
     // End of Class

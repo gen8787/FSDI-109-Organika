@@ -8,7 +8,7 @@ const cartProductReducer = (state = [], action) => {
             for (let i = 0; i < copy.length; i++) {
                 if (copy[i].product.id === id) {
                     found = true;
-                    copy[i].quantity += action.payload.qty;
+                    copy[i].qty += action.payload.qty;
                     break;
                 }
             }
@@ -20,8 +20,7 @@ const cartProductReducer = (state = [], action) => {
             return copy;
 
         case 'REMOVE_PRODUCT':
-            //logic
-            break;
+            return state.filter(item => item.product.id !== action.payload);
 
         default:
             return state;

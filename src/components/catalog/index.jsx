@@ -46,9 +46,9 @@ class Catalog extends Component {
     }
 
 
-    componentDidMount() {
+    async componentDidMount() {
         let service = new ProductService();
-        let data = service.getProducts();
+        let data = await service.getProducts();
 
         var cats = [];
         for (let i = 0; i < data.length; i++) {

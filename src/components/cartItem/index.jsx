@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './cartItem.css';
+import { removeProductFromCart } from '../../store/actions/actions'
 
 class CartItem extends Component {
     state = {
@@ -8,6 +9,11 @@ class CartItem extends Component {
     }
 
     render() {
+        let total = 0;
+        for (let i = 0; i < this.props.cart.length; i++) {
+            total += (this.props.cart[i].product.price * this.props.cart[i].qty);
+        }
+
         return (
             <div>
 
@@ -18,11 +24,11 @@ class CartItem extends Component {
                         <p>${item.product.price.toFixed(2)}</p>
                         <p>Quantity: {item.qty}</p>
                         <p>Total: ${(item.product.price * item.qty).toFixed(2)}</p>
-                        <i onClick={this.handleDelete} className="ml-5 fa fa-trash"></i>
+                        <i onClick={() => this.removeItem(item.product.id)} className="ml-5 fa fa-trash"></i>
                     </div>
                 )}
 
-                <h1 className="cart-total my-5">Total: ${this.state.total.toFixed(2)}</h1>
+                <h1 className="cart-total my-5">Total: ${total.toFixed(2)}</h1>
                 <button className="btn btn-lg btn-success">Checkout</button>
 
             </div>
@@ -31,27 +37,12 @@ class CartItem extends Component {
 
 
     // H A N D L E R S
-    handleDelete = () => {
-        console.log("Clicked!")
-    }
-
-
-    componentDidMount() {
-        var total = 0;
-
-        for (let i = 0; i < this.props.cart.length; i++) {
-            total += (this.props.cart[i].product.price * this.props.cart[i].qty);
-        }
-
-        this.setState({ total: total });
-
-        return total;
+    removeItem = (productId) => {
+        this.props.removeProductFromCart(productId)
     }
 
     // End of Class
 }
-
-
 
 
 const mapStateToProps = state => {
@@ -60,4 +51,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, null)(CartItem);
+export default connect(mapStateToProps, { removeProductFromCart })(CartItem);
